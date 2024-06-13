@@ -16,18 +16,38 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base{
+  * {
+    @apply box-border list-none p-0 m-0 scroll-smooth ;
+  }
+  body{
+    @apply primary-bg;
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .primary-bg {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+      )
+      rgb(var(--background-start-rgb));
+  }
+  .flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex-around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 }
