@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function SearchBar() {
     return (
-        <div className=" w-full h-[72px] bg-secondary text-white sticky top-0 flex-center">
+        <div className=" w-full h-[72px] bg-secondary text-white  flex-center z-50">
             <Link
                 href={"/telephone"}
                 className=" flex-center flex-col w-[100px] cursor-pointer"

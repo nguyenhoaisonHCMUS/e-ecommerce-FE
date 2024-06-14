@@ -9,9 +9,14 @@ function ProductCard({ src }: ProductCardType) {
     return (
         <div>
             <Card
+                className=" h-full"
                 hoverable
                 style={{ width: 160 }}
-                cover={<Image alt="product" src={src} />}
+                cover={
+                    <div className=" h-[166px] object-cover">
+                        <Image alt="product" src={src} className=" w-full" />
+                    </div>
+                }
             >
                 <p className=" font-bold max-h-[46px] overflow-hidden text-ellipsis">
                     iPad Pro M4 13&quot; Wifi (256GB) - Chính hãng Apple VN

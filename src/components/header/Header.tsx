@@ -65,7 +65,7 @@ function Header() {
                     )}
                 </div>
             </div>
-            <div>
+            <div className=" sticky top-0 z-50">
                 <SearchBar />
             </div>
         </>
