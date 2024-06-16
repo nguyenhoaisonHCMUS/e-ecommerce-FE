@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import StoreProvider from "./StoreProvider";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 
@@ -19,13 +20,17 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <div className=" min-h-screen flex  flex-col justify-between">
-                    <Header />
-                    <div className=" h-full flex-1 flex w-full mx-auto">
-                        {children}
+                <StoreProvider>
+                    <div className=" min-h-screen flex  flex-col justify-between">
+                        <Header />
+                        <div className=" h-full flex-1 flex justify-center">
+                            <div className=" max-w-[1200px] w-[96%] mx-auto">
+                                {children}
+                            </div>
+                        </div>
+                        <Footer />
                     </div>
-                    <Footer />
-                </div>
+                </StoreProvider>
             </body>
         </html>
     );

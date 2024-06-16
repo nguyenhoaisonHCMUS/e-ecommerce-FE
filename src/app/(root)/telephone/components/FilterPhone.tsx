@@ -1,7 +1,6 @@
-import useDebounce from "@/app/hooks/useDebounce";
+import useDebounce from "@/hooks/useDebounce";
 import { Select, Slider } from "antd";
-import { Input, Space } from "antd";
-import { SearchProps } from "antd/es/input/Search";
+import { Input } from "antd";
 import { useEffect, useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 
@@ -20,6 +19,7 @@ const brands: Array<{ value: string; label: string }> = [
 function FilterPhone() {
     const [searchName, setSearchName] = useState<string>("");
     const debouncedSearchValue = useDebounce(searchName, 700);
+    const [rangeValue, setRangeValue] = useState(1);
     //use debounceSearchValue to render data
 
     const onChange = (value: string) => {
@@ -33,8 +33,6 @@ function FilterPhone() {
     const onChangeComplete = (value: number | number[]) => {
         console.log("onChangeComplete: ", value);
     };
-    const onSearch2: SearchProps["onSearch"] = (value, _e, info) =>
-        console.log(info?.source, value);
 
     useEffect(() => {
         if (debouncedSearchValue) {
@@ -45,7 +43,7 @@ function FilterPhone() {
     return (
         <div>
             {/* filter */}
-            <div className=" p-4 sticky top-[72px]">
+            <div className="sticky top-[72px]">
                 <div className=" p-4 pb-10 shadow-xl rounded-md bg-white w-fit h-full">
                     <h2 className=" text-xl mb-3 font-bold text-center">
                         Bộ lọc

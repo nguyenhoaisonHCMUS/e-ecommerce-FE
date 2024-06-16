@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function SearchBar() {
     return (
-        <div className=" w-full h-[72px] bg-secondary text-white  flex-center z-50">
+        <div className=" w-full h-[72px] bg-secondary text-white flex px-6 z-50">
             <Link
                 href={"/telephone"}
                 className=" flex-center flex-col w-[100px] cursor-pointer"
@@ -15,10 +15,13 @@ function SearchBar() {
                 <MdPhoneIphone className=" w-[30px] h-[30px]" />
                 <span>Điện thoại</span>
             </Link>
-            <div className=" flex-center flex-col w-[100px] cursor-pointer">
+            <Link
+                href={"/apple"}
+                className=" flex-center flex-col w-[100px] cursor-pointer"
+            >
                 <FcIphone className=" w-[30px] h-[30px]" />
                 <span>Apple</span>
-            </div>
+            </Link>
             <div className=" flex-center flex-col w-[100px] cursor-pointer">
                 <CiLaptop className=" w-[30px] h-[30px]" />
                 <span>Laptop</span>
@@ -27,10 +30,13 @@ function SearchBar() {
                 <FaTabletAlt className=" w-[30px] h-[30px]" />
                 <span>Tablet</span>
             </div>
-            <div className=" flex-center flex-col w-[100px] cursor-pointer">
+            <Link
+                href={"/screen"}
+                className=" flex-center flex-col w-[100px] cursor-pointer"
+            >
                 <AiOutlineFundProjectionScreen className=" w-[30px] h-[30px]" />
                 <span>Màn hình</span>
-            </div>
+            </Link>
         </div>
     );
 }

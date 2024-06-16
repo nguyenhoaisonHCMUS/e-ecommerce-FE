@@ -4,7 +4,7 @@ import publics from "../../../public";
 function Footer() {
     return (
         <div className=" w-full">
-            <div className=" w-[95%] mx-auto p-2 rounded-xl bg-secondary text-white flex flex-1 gap-4">
+            <div className="  w-[95%] mx-auto p-2 rounded-xl bg-secondary text-white flex justify-between px-4 flex-1 gap-4">
                 <div className=" ">
                     <p className=" text-xl mb-2">Hỗ trợ - Dịch vụ</p>
                     <div>
