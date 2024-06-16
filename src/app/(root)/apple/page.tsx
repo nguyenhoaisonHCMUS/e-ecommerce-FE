@@ -7,6 +7,7 @@ import publics from "../../../../public";
 import ProductCard from "@/components/ProductCard";
 import { Button } from "antd";
 import { useRouter } from "next/navigation";
+import FooterApple from "./components/FooterApple";
 const products: string[] = [
     publics.logo,
     publics.paymaster,
@@ -24,6 +25,7 @@ function ApplePage() {
             <div className=" my-8 rounded-xl overflow-hidden">
                 <ListSlides lists={appleImage} width={1200} height={382} />
             </div>
+
             {/* iphone */}
             <div className=" mb-8">
                 <div>
@@ -96,7 +98,7 @@ function ApplePage() {
                     </div>
                 </div>
             </div>
-
+            {/* mac book */}
             <div className=" mb-8">
                 <div>
                     <div>
@@ -131,6 +133,117 @@ function ApplePage() {
                         </div>
                     </div>
                 </div>
+            </div>
+            {/* apple watch */}
+            <div className=" mb-8">
+                <div>
+                    <div>
+                        <p className=" text-xl font-bold mt-4 mb-2 text-center">
+                            {" "}
+                            Apple watch
+                        </p>
+                    </div>
+                    <div className=" flex flex-col gap-4">
+                        <div className=" flex-1 ">
+                            <div className=" flex-1 p-4 shadow-xl rounded-md bg-white w-full my-auto">
+                                <div className=" grid grid-cols-5 gap-y-6 gap-x-4">
+                                    {products.map((product, index) => {
+                                        return (
+                                            <ProductCard
+                                                src={product}
+                                                key={index}
+                                            />
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+                        <div className=" flex-center">
+                            <Button
+                                onClick={() => router.push("apple/ipad")}
+                                size={"large"}
+                                className=" bg-primary flex-1 text-black text-base font-semibold"
+                            >
+                                Xem thêm
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* tai nghe */}
+            <div className=" mb-8">
+                <div>
+                    <div>
+                        <p className=" text-xl font-bold mt-4 mb-2 text-center">
+                            {" "}
+                            Tai nghe Apple
+                        </p>
+                    </div>
+                    <div className=" flex flex-col gap-4">
+                        <div className=" flex-1 ">
+                            <div className=" flex-1 p-4 shadow-xl rounded-md bg-white w-full my-auto">
+                                <div className=" grid grid-cols-5 gap-y-6 gap-x-4">
+                                    {products.map((product, index) => {
+                                        return (
+                                            <ProductCard
+                                                src={product}
+                                                key={index}
+                                            />
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+                        <div className=" flex-center">
+                            <Button
+                                onClick={() => router.push("apple/ipad")}
+                                size={"large"}
+                                className=" bg-primary flex-1 text-black text-base font-semibold"
+                            >
+                                Xem thêm
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* phụ kiện apple */}
+            <div className=" mb-8">
+                <div>
+                    <div>
+                        <p className=" text-xl font-bold mt-4 mb-2 text-center">
+                            {" "}
+                            Phụ kiên Apple
+                        </p>
+                    </div>
+                    <div className=" flex flex-col gap-4">
+                        <div className=" flex-1 ">
+                            <div className=" flex-1 p-4 shadow-xl rounded-md bg-white w-full my-auto">
+                                <div className=" grid grid-cols-5 gap-y-6 gap-x-4">
+                                    {products.map((product, index) => {
+                                        return (
+                                            <ProductCard
+                                                src={product}
+                                                key={index}
+                                            />
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+                        <div className=" flex-center">
+                            <Button
+                                onClick={() => router.push("apple/ipad")}
+                                size={"large"}
+                                className=" bg-primary flex-1 text-black text-base font-semibold"
+                            >
+                                Xem thêm
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className=" mt-8">
+                <FooterApple />
             </div>
         </div>
     );

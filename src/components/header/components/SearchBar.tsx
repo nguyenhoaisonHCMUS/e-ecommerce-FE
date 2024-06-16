@@ -22,10 +22,13 @@ function SearchBar() {
                 <FcIphone className=" w-[30px] h-[30px]" />
                 <span>Apple</span>
             </Link>
-            <div className=" flex-center flex-col w-[100px] cursor-pointer">
+            <Link
+                href={"/laptop"}
+                className=" flex-center flex-col w-[100px] cursor-pointer"
+            >
                 <CiLaptop className=" w-[30px] h-[30px]" />
                 <span>Laptop</span>
-            </div>
+            </Link>
             <div className=" flex-center flex-col w-[100px] cursor-pointer">
                 <FaTabletAlt className=" w-[30px] h-[30px]" />
                 <span>Tablet</span>
