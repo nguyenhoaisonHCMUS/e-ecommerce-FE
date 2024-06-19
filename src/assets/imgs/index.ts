@@ -24,12 +24,31 @@ import lap1 from './lap_1200x200-acer_1.png';
 import lap2 from './lap_laptop-ai-1200x200.png';
 import lap3 from './lap_swift-01.png';
 
+import home1image1 from './home1_1200x375-dienmay-070624-1.png';
+import home1image2 from './home1_ocal-tiger-1200x375.png';
+import home1image3 from './home1_s24-web-father-day.jpg';
+import home1image4 from './home1_xiaomi-redmi-12-web.png';
+import home1image5 from './home1_tecno-camon-30-1200x375.jpg';
+
+import home2img1 from './hơm_dt_infinix-note-30-chuyen-muc_638525012413350772.jpg';
+import home2lap from './home2_laptop-hp.png';
+
+import cusList1 from './cus_picture1-1261.png';
+
+import dt1 from './flashsale_image-removebg-preview-1.webp';
+
+export const flashSale: string = dt1.src;
+export const cusList: string[] = [cusList1.src];
+
+export const home2telephone:string = home2img1.src; 
+export const home2Lap:string = home2lap.src; 
+
 
 
 export const imagestelephone: string[] = [telephone1.src, telephone2.src, telephone3.src, telephone4.src]
 export const screenImage: string[] = [screen1.src, screen2.src, screen3.src];
 export const appleImage: string[] = [apple1.src, apple2.src, apple3.src];
 export const lapImage: string[] = [lap1.src, lap2.src, lap3.src];
-
+export const home1Image: string[] = [home1image1.src, home1image2.src, home1image3.src, home1image4.src, home1image5.src]
 
 export const blogImage: string[]=[ipdautien.src, blogIphone1.src, blogIphone2.src, blogipad1.src, blogLap1.src, blogLap2.src]

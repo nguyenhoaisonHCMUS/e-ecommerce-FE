@@ -11,7 +11,7 @@ function SearchInput({ className }: searchInputType) {
     console.log(searchValue);
     return (
         <div
-            className={`${className} flex-between h-[42px] min-w-[310px] border-[1px] pr-2 rounded-md overflow-hidden border-slate-100 shadow-sm`}
+            className={`${className} flex-between h-[42px] min-w-[310px] border-[1px] pr-2 rounded-xl overflow-hidden border-slate-100 shadow-sm`}
         >
             <div className=" h-full w-[10%] bg-primary flex-center">
                 <IoSearch className=" w-6 h-6" />

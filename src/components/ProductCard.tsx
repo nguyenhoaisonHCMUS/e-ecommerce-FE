@@ -4,19 +4,23 @@ import Image from "next/image";
 
 type ProductCardType = {
     src: string;
+    width: number;
+    height?: number;
 };
-function ProductCard({ src }: ProductCardType) {
+function ProductCard({ src, width, height = 300 }: ProductCardType) {
     return (
         <div className="">
             <Card
                 className=" h-full shadow-orange-300 border-2 border-collapse"
                 hoverable
-                style={{ width: 160 }}
+                style={{ width: `${width}px`, height: `${height}px` }}
                 cover={
-                    <div className=" h-[166px] object-cover">
+                    <div className="w-[95%] overflow-hidden object-cover">
                         <Image
                             alt="product"
                             src={src}
+                            width={160}
+                            height={200}
                             className="w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110"
                         />
                     </div>

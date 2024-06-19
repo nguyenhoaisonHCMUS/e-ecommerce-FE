@@ -42,7 +42,7 @@ function Header() {
                     <span className=" text-2xl ">SPhone Store</span>
                 </Link>
                 <div className="flex-1 flex-center gap-2">
-                    <SearchInput className="flex-1" />
+                    <SearchInput className="flex-1 max-w-[400px]" />
                 </div>
                 <div className="flex-between gap-2">
                     {["So sánh", "Đã lưu", "Giỏ hàng"].map((text, index) => {
